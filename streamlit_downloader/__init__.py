@@ -1,11 +1,12 @@
 from base64 import b64encode
 from io import BytesIO
+from pathlib import Path
 from string import Template
 
 import magic
 import streamlit.components.v1 as components
 
-_RELEASE = False
+_RELEASE = True
 
 
 def downloader(data: BytesIO, filename: str):
@@ -26,7 +27,9 @@ def downloader(data: BytesIO, filename: str):
         "size": size(data),
         "b64": b64encode(data.getvalue()).decode(),
     }
-    with open("streamlit-downloader/downloader.html", "r") as f:
+
+    template_path = Path(__file__).resolve().parent / "downloader.html"
+    with open(template_path, "r") as f:
         template = Template(f.read())
 
     components.html(template.substitute(context), height=45)

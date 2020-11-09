@@ -4,7 +4,7 @@ with open("README.md", "r") as f:
     long_description = f.read()
 
 setuptools.setup(
-    name="streamlit-downloader",
+    name="streamlit_downloader",
     version="0.0.1",
     author="Jeremy Haak",
     author_email="jamincan@gmail.com",
@@ -14,7 +14,10 @@ setuptools.setup(
     url="https://github.com/jamincan/streamlit-downloader",
     packages=setuptools.find_packages(),
     include_package_data=True,
-    classifiers=[],
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+    ],
     python_requires=">=3.6",
     install_requires=[
         # By definition, a Custom Component depends on Streamlit.
