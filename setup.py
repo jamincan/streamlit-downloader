@@ -1,14 +1,17 @@
 import setuptools
 
+with open("README.md", "r") as f:
+    long_description = f.read()
+
 setuptools.setup(
     name="streamlit-downloader",
     version="0.0.1",
-    author="",
-    author_email="",
-    description="",
-    long_description="",
-    long_description_content_type="text/plain",
-    url="",
+    author="Jeremy Haak",
+    author_email="jamincan@gmail.com",
+    description="A basic static widget for displaying a download link with streamlit.",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/jamincan/streamlit-downloader",
     packages=setuptools.find_packages(),
     include_package_data=True,
     classifiers=[],
