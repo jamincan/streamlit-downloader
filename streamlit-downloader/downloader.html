@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
+    <style type="text/css">
+        @media (max-width: 400px) {
+            .file {
+                flex-direction: column;
+            }
+
+            .file a {
+                width: 100%;
+            }
+        }
+
+        body {
+            font-family: "IBM Plex Sans", sans-serif;
+            font-weight: 400;
+            margin: 0.25rem;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            -webkit-box-align: center;
+            box-sizing: border-box;
+        }
+
+        i {
+            padding: 0.25rem;
+            color: rgb(163, 168, 184);
+        }
+
+        .file {
+            display: flex;
+            align-items: baseline;
+            -webkit-box-align: baseline;
+            padding-left: 0.5rem;
+            box-sizing: border-box;
+            overflow: hidden;
+            flex: 1 1 0%;
+        }
+
+        .file a {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-decoration: none;
+            display: block;
+            margin-right: 0.5rem;
+            box-sizing: border-box;
+        }
+
+        .file a:hover {
+            text-decoration: underline;
+        }
+
+
+        .file small {
+            font-size: 0.8rem;
+            line-height: 0.8rem;
+            height: 0.8rem;
+            color: rgb(163, 168, 184);
+        }
+    </style>
+</head>
+
+<body>
+    <i class="material-icons-outlined icon-md" aria-hidden="true">&#xE24D;</i>
+    <div class="file">
+        <a href="data:$mimetype;base64,$b64" download="$filename">$filename</a>
+        <small>$size</small>
+    </div>
+</body>
+
+</html>
