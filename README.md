@@ -2,7 +2,7 @@
 A basic widget for displaying a download link with streamlit.
 
 ## Installation
-You can install this package using PyPI:
+You can install this package using pip:
 
 ```pip install https://github.com/jamincan/streamlit-downloader/releases/download/0.0.1/streamlit_downloader-0.0.1.tar.gz```
 
